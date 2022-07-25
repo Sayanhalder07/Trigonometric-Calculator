@@ -4,7 +4,7 @@ public class Trigonometry_Calculator {
     public static void main(String[] args){
 
         System.out.println("Please consider 'Sine' = s, 'Cosine' = c, 'Tangent' = t");
-
+        
 
         char operator;
         double degrees;
@@ -13,33 +13,33 @@ public class Trigonometry_Calculator {
         System.out.print("Please choose Sine, Cosine or Tangent = ");
         operator = input.next().charAt(0);
 
+        if (operator == 's') {
+            System.out.print("Enter the angle = ");
+            degrees = input.nextDouble();
 
-        System.out.print("Enter the angle = ");
-        degrees = input.nextDouble();
-
-        switch (operator) {
-            // sin() method to get the Sine value
-            case 's':  double sinValue = Math.sin(degrees);
-                System.out.println("sin(" + degrees + ") = " + sinValue);
-            break;
-
-
-            // cos() method to get the Cosine value
-            case 'c':  double cosValue = Math.cos(degrees);
-                System.out.println("cos(" + degrees + ") = " + cosValue);
-            break;
-
-
-            // tan() method to get the Tangent value
-            case 't':  double tanValue = Math.tan(degrees);
-                System.out.println("tan(" + degrees + ") = " + tanValue);
-            break;
-
-
-            default:
-                System.out.println("Invalid operator");
-            break;
+            double sinValue = Math.sin(degrees);
+            System.out.println("sin(" + degrees + ") = " + sinValue);
         }
+
+        else if (operator == 'c') {
+            System.out.print("Enter the angle = ");
+            degrees = input.nextDouble();
+
+            double cosValue = Math.cos(degrees);
+            System.out.println("cos(" + degrees + ") = " + cosValue);
+        }
+
+        else if (operator == 't') {
+            System.out.print("Enter the angle = ");
+            degrees = input.nextDouble();
+
+            double tanValue = Math.tan(degrees);
+            System.out.println("tan(" + degrees + ") = " + tanValue);
+        }
+
+        else System.out.println("Invalid operator");
+
+
 
     }
 }
