@@ -5,7 +5,6 @@ public class Trigonometry_Calculator {
 
         System.out.println("Please consider 'Sine' = s, 'Cosine' = c, 'Tangent' = t");
 
-//        char sine = 's', cosine = 'c', tangent = 't';
 
         char operator;
         double degrees;
@@ -14,25 +13,24 @@ public class Trigonometry_Calculator {
         System.out.print("Please choose Sine, Cosine or Tangent = ");
         operator = input.next().charAt(0);
 
-//        sine = input.next().charAt(0);
-//        cosine = input.next().charAt(0);
-//        tangent = input.next().charAt(0);
-
 
         System.out.print("Enter the angle = ");
         degrees = input.nextDouble();
 
         switch (operator) {
+            // sin() method to get the Sine value
             case 's':  double sinValue = Math.sin(degrees);
                 System.out.println("sin(" + degrees + ") = " + sinValue);
             break;
 
 
+            // cos() method to get the Cosine value
             case 'c':  double cosValue = Math.cos(degrees);
                 System.out.println("cos(" + degrees + ") = " + cosValue);
             break;
 
 
+            // tan() method to get the Tangent value
             case 't':  double tanValue = Math.tan(degrees);
                 System.out.println("tan(" + degrees + ") = " + tanValue);
             break;
