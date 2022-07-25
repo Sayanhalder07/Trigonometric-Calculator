@@ -1,0 +1,47 @@
+import java.lang.Math;
+import java.util.Scanner;
+public class Trigonometry_Calculator {
+    public static void main(String[] args){
+
+        System.out.println("Please consider 'Sine' = s, 'Cosine' = c, 'Tangent' = t");
+
+//        char sine = 's', cosine = 'c', tangent = 't';
+
+        char operator;
+        double degrees;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please choose Sine, Cosine or Tangent = ");
+        operator = input.next().charAt(0);
+
+//        sine = input.next().charAt(0);
+//        cosine = input.next().charAt(0);
+//        tangent = input.next().charAt(0);
+
+
+        System.out.print("Enter the angle = ");
+        degrees = input.nextDouble();
+
+        switch (operator) {
+            case 's':  double sinValue = Math.sin(degrees);
+                System.out.println("sin(" + degrees + ") = " + sinValue);
+            break;
+
+
+            case 'c':  double cosValue = Math.cos(degrees);
+                System.out.println("cos(" + degrees + ") = " + cosValue);
+            break;
+
+
+            case 't':  double tanValue = Math.tan(degrees);
+                System.out.println("tan(" + degrees + ") = " + tanValue);
+            break;
+
+
+            default:
+                System.out.println("Invalid operator");
+            break;
+        }
+
+    }
+}
